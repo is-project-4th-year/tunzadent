@@ -6,8 +6,8 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/accounts/', include('accounts.urls')),
-    path('api/predictions/', include('predictions.urls')),
+    path('accounts/', include('accounts.urls')),
+    path('predictions/', include('predictions.urls')),
     
     # Redirect root URL to frontend
     path('', RedirectView.as_view(url='http://localhost:3000/', permanent=False), name='frontend'),
